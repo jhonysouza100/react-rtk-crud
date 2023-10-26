@@ -14,14 +14,15 @@ function TaskList() {
   }
 
   return (
-    <div className="w-4/6 bg-red-100">
-      <h2>{tasks.length} Tasks</h2>
+    <div className="w-4/6">
       <header className="flex justify-between items-center py-4">
+        <h2>{tasks.length} Tasks</h2>
         <nav>
-          <Link to="/new" className="bg-indigo-600 px-2 py-1 rounded-md text-sm">Add Task</Link>
+          <Link to="/new" className="bg-indigo-600 px-2 py-1 rounded-sm text-sm">Add Task</Link>
         </nav>
       </header>
       <h3>Tasks List</h3>
+
       <section className="grid grid-cols-3 gap-4">
         {tasks.map(el => (
           <div key={el.id} className="bg-neutral-800 p-4 rounded-md">
@@ -36,6 +37,7 @@ function TaskList() {
           </div>
         ))}
       </section>
+      
     </div>
   );
 }
